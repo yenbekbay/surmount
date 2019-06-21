@@ -24,7 +24,8 @@
     // module resolution
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "types": []
   },
   "include": ["./src/**/*"]
 }
