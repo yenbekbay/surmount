@@ -1,0 +1,30 @@
+{
+  "dir": "ltr",
+  "lang": "en",
+  "name": "Surmount",
+  "scope": "./",
+  "display": "fullscreen",
+  "start_url": "./",
+  "short_name": "Surmount",
+  "theme_color": "white",
+  "description": "break your smoking habit",
+  "orientation": "portrait",
+  "background_color": "white",
+  "icons": [
+    {
+      "src": "./apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "./android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
