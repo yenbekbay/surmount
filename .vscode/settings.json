@@ -1,0 +1,41 @@
+{
+  "editor.formatOnSave": false,
+  "editor.insertSpaces": true,
+  "editor.rulers": [80],
+  "editor.tabSize": 2,
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.formatOnSave": true
+  },
+
+  "files.autoSave": "off",
+  "files.exclude": {
+    "**/.git/": true,
+    "**/node_modules/": true,
+    "**/.DS_Store": true,
+    ".cache/": true,
+    "dist/": true
+  },
+
+  "javascript.implicitProjectConfig.checkJs": true,
+  "javascript.suggestionActions.enabled": false,
+  "javascript.validate.enable": true,
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "typescript.format.enable": false,
+  "emmet.showExpandedAbbreviation": "never"
+}

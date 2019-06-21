@@ -13,11 +13,22 @@
     "inDev": true,
     "swDest": "public/service-worker.js"
   },
+  "prettier": {
+    "bracketSpacing": false,
+    "jsxBracketSameLine": false,
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "useTabs": false
+  },
   "devDependencies": {
     "@types/react": "16.8.22",
     "@types/react-dom": "16.8.4",
     "parcel-bundler": "1.12.3",
     "parcel-plugin-sw-cache": "0.3.1",
+    "prettier": "^1.18.2",
     "typescript": "3.5.2"
   },
   "dependencies": {
