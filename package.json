@@ -7,7 +7,6 @@
   "scripts": {
     "typecheck": "tsc --noEmit --pretty",
     "dev": "parcel public/index.html",
-    "dev.watch": "parcel watch public/index.html",
     "build": "parcel build public/index.html"
   },
   "cache": {
@@ -15,8 +14,14 @@
     "swDest": "public/service-worker.js"
   },
   "devDependencies": {
+    "@types/react": "16.8.22",
+    "@types/react-dom": "16.8.4",
     "parcel-bundler": "1.12.3",
     "parcel-plugin-sw-cache": "0.3.1",
     "typescript": "3.5.2"
+  },
+  "dependencies": {
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
   }
 }
