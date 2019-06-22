@@ -1,19 +1,18 @@
+import {useWindowSize} from 'react-use';
 import React, {useCallback} from 'react';
 
-import {initMatter} from './matter';
+import {initPhaser} from './phaser';
 
 interface AppProps {}
 
 export const App: React.FC<AppProps> = _props => {
-  const matterRef = useCallback((element: HTMLDivElement | null) => {
+  const windowSize = useWindowSize();
+
+  const phaserRef = useCallback((element: HTMLDivElement | null) => {
     if (element) {
-      initMatter(element);
+      initPhaser({element, windowSize});
     }
   }, []);
 
-  return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div ref={matterRef} id="matter" />
-    </div>
-  );
+  return <div ref={phaserRef} id="phaser" />;
 };

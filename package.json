@@ -7,7 +7,8 @@
   "scripts": {
     "typecheck": "tsc --noEmit --pretty",
     "dev": "parcel public/index.html",
-    "build": "parcel build public/index.html"
+    "build": "parcel build public/index.html",
+    "sync-assets": "bash scripts/assets-sketch-export.sh slices .design/scene.sketch"
   },
   "cache": {
     "inDev": true,
@@ -36,14 +37,16 @@
     ]
   },
   "dependencies": {
-    "matter-js": "0.14.2",
+    "keyboardjs": "^2.5.1",
+    "phaser": "3.18.1",
     "poly-decomp": "0.3.0",
     "react": "16.8.6",
-    "react-dom": "16.8.6"
+    "react-dom": "16.8.6",
+    "react-use": "9.7.0",
+    "rebound": "^0.1.0"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "1.2.0",
-    "@types/matter-js": "0.10.2",
     "@types/node": "^12.0.8",
     "@types/react": "16.8.22",
     "@types/react-dom": "16.8.4",
