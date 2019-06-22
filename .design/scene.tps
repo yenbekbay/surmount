@@ -56,7 +56,7 @@
         <key>jxrCompressionLevel</key>
         <uint>0</uint>
         <key>ditherType</key>
-        <enum type="SettingsBase::DitherType">NearestNeighbour</enum>
+        <enum type="SettingsBase::DitherType">PngQuantLow</enum>
         <key>backgroundColor</key>
         <uint>0</uint>
         <key>libGdx</key>
@@ -82,7 +82,7 @@
         <key>atfFormats</key>
         <string></string>
         <key>textureFormat</key>
-        <enum type="SettingsBase::TextureFormat">png</enum>
+        <enum type="SettingsBase::TextureFormat">png8</enum>
         <key>borderPadding</key>
         <uint>0</uint>
         <key>maxTextureSize</key>
@@ -132,11 +132,11 @@
             <key>json</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../public/assets/scene.sprites</filename>
+                <filename>../assets/scene-sprites.json</filename>
             </struct>
         </map>
         <key>multiPack</key>
-        <false/>
+        <true/>
         <key>forceIdenticalLayout</key>
         <false/>
         <key>outputFormat</key>
@@ -181,23 +181,47 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../public/assets/ground.png</key>
+            <key type="filename">exports/background/background_1_trees.png</key>
+            <key type="filename">exports/background/background_2_trees.png</key>
+            <key type="filename">exports/background/background_3_trees.png</key>
+            <key type="filename">exports/background/background_4_mountain.png</key>
+            <key type="filename">exports/background/background_5_clouds.png</key>
+            <key type="filename">exports/background/background_6_sky.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>512,89,1024,179</rect>
+                <rect>480,270,960,540</rect>
                 <key>scale9Paddings</key>
-                <rect>512,89,1024,179</rect>
+                <rect>480,270,960,540</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">exports/ground.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>512,89,1023,179</rect>
+                <key>scale9Paddings</key>
+                <rect>512,89,1023,179</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
         </map>
         <key>fileList</key>
         <array>
-            <filename>../public/assets/ground.png</filename>
+            <filename>exports/background/background_1_trees.png</filename>
+            <filename>exports/background/background_2_trees.png</filename>
+            <filename>exports/background/background_3_trees.png</filename>
+            <filename>exports/background/background_4_mountain.png</filename>
+            <filename>exports/background/background_5_clouds.png</filename>
+            <filename>exports/background/background_6_sky.png</filename>
+            <filename>exports/ground.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
@@ -206,6 +230,8 @@
         <key>ignoredWarnings</key>
         <array>
             <string>data-file-name-extension</string>
+            <string>phaser3-exporter-beta</string>
+            <string>texture-file-name-extension</string>
         </array>
         <key>commonDivisorX</key>
         <uint>1</uint>

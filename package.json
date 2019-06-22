@@ -14,6 +14,7 @@
     "inDev": true,
     "swDest": "public/service-worker.js"
   },
+  "assetsPath": "assets",
   "prettier": {
     "bracketSpacing": false,
     "jsxBracketSameLine": false,
@@ -54,6 +55,7 @@
     "husky": "2.4.1",
     "lint-staged": "8.2.1",
     "parcel-bundler": "1.12.3",
+    "parcel-plugin-asset-copier": "1.0.0",
     "parcel-plugin-inlinesvg": "0.1.1",
     "parcel-plugin-sw-cache": "0.3.1",
     "prettier": "1.18.2",

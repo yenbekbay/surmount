@@ -29,7 +29,7 @@ shift 2
 # Get command components
 sketch_app_path="$(mdfind kMDItemCFBundleIdentifier == 'com.bohemiancoding.sketch3' | head -n 1)"
 sketchtool_bin="${sketch_app_path}/Contents/Resources/sketchtool/bin/sketchtool"
-assets_path="$(cd ../public/assets; pwd)"
+assets_path="$(cd ../.design/exports; pwd)"
 normalized_sketch_file_path="$(cd ..; echo "$(pwd)/${sketch_file_path}")"
 
 # Run the command

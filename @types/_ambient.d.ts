@@ -13,3 +13,6 @@ declare const module: {
     accept: (callback?: () => void) => void;
   };
 };
+
+// phaser dependencies
+declare class ActiveXObject {}

@@ -1,0 +1,178 @@
+{
+  "textures": [
+    {
+      "image": "scene-sprites-0.png",
+      "format": "RGBA8888",
+      "size": {
+        "w": 1922,
+        "h": 1926
+      },
+      "scale": 1,
+      "frames": [
+        {
+          "filename": "background_6_sky.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 1920,
+            "h": 1080
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 1920,
+            "h": 1080
+          },
+          "frame": {
+            "x": 1,
+            "y": 1,
+            "w": 1920,
+            "h": 1080
+          }
+        },
+        {
+          "filename": "background_4_mountain.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 1920,
+            "h": 1080
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 393,
+            "w": 1920,
+            "h": 687
+          },
+          "frame": {
+            "x": 1,
+            "y": 1083,
+            "w": 1920,
+            "h": 687
+          }
+        },
+        {
+          "filename": "background_5_clouds.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 1920,
+            "h": 1080
+          },
+          "spriteSourceSize": {
+            "x": 53,
+            "y": 437,
+            "w": 1858,
+            "h": 153
+          },
+          "frame": {
+            "x": 1,
+            "y": 1772,
+            "w": 1858,
+            "h": 153
+          }
+        }
+      ]
+    },
+    {
+      "image": "scene-sprites-1.png",
+      "format": "RGBA8888",
+      "size": {
+        "w": 2048,
+        "h": 1711
+      },
+      "scale": 1,
+      "frames": [
+        {
+          "filename": "ground.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 2046,
+            "h": 357
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 2046,
+            "h": 357
+          },
+          "frame": {
+            "x": 1,
+            "y": 1,
+            "w": 2046,
+            "h": 357
+          }
+        },
+        {
+          "filename": "background_3_trees.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 1920,
+            "h": 1080
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 602,
+            "w": 1920,
+            "h": 478
+          },
+          "frame": {
+            "x": 1,
+            "y": 360,
+            "w": 1920,
+            "h": 478
+          }
+        },
+        {
+          "filename": "background_2_trees.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 1920,
+            "h": 1080
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 611,
+            "w": 1920,
+            "h": 469
+          },
+          "frame": {
+            "x": 1,
+            "y": 840,
+            "w": 1920,
+            "h": 469
+          }
+        },
+        {
+          "filename": "background_1_trees.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 1920,
+            "h": 1080
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 681,
+            "w": 1920,
+            "h": 399
+          },
+          "frame": {
+            "x": 1,
+            "y": 1311,
+            "w": 1920,
+            "h": 399
+          }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "3.0",
+    "smartupdate": "$TexturePacker:SmartUpdate:78f0651c21a9e3aec02947d53ecde923:f24dd24803ae645f30116da9dc485c97:cfb4ff7d3588fc2ca787fa57c4aa3ec0$"
+  }
+}
