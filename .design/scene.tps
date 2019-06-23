@@ -181,12 +181,12 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">exports/background/background_1_trees.png</key>
-            <key type="filename">exports/background/background_2_trees.png</key>
-            <key type="filename">exports/background/background_3_trees.png</key>
-            <key type="filename">exports/background/background_4_mountain.png</key>
-            <key type="filename">exports/background/background_5_clouds.png</key>
-            <key type="filename">exports/background/background_6_sky.png</key>
+            <key type="filename">exports/background_1_trees.png</key>
+            <key type="filename">exports/background_2_trees.png</key>
+            <key type="filename">exports/background_3_trees.png</key>
+            <key type="filename">exports/background_4_mountain.png</key>
+            <key type="filename">exports/background_5_clouds.png</key>
+            <key type="filename">exports/background_6_sky.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -196,6 +196,40 @@
                 <rect>480,270,960,540</rect>
                 <key>scale9Paddings</key>
                 <rect>480,270,960,540</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">exports/girl_idle_1.png</key>
+            <key type="filename">exports/girl_idle_2.png</key>
+            <key type="filename">exports/girl_idle_3.png</key>
+            <key type="filename">exports/girl_idle_4.png</key>
+            <key type="filename">exports/girl_jump_1.png</key>
+            <key type="filename">exports/girl_jump_2.png</key>
+            <key type="filename">exports/girl_jump_3.png</key>
+            <key type="filename">exports/girl_jump_4.png</key>
+            <key type="filename">exports/girl_jump_5.png</key>
+            <key type="filename">exports/girl_jump_6.png</key>
+            <key type="filename">exports/girl_run_1.png</key>
+            <key type="filename">exports/girl_run_2.png</key>
+            <key type="filename">exports/girl_run_3.png</key>
+            <key type="filename">exports/girl_run_4.png</key>
+            <key type="filename">exports/girl_run_5.png</key>
+            <key type="filename">exports/girl_run_6.png</key>
+            <key type="filename">exports/girl_walk_1.png</key>
+            <key type="filename">exports/girl_walk_2.png</key>
+            <key type="filename">exports/girl_walk_3.png</key>
+            <key type="filename">exports/girl_walk_4.png</key>
+            <key type="filename">exports/girl_walk_5.png</key>
+            <key type="filename">exports/girl_walk_6.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>73,87,145,174</rect>
+                <key>scale9Paddings</key>
+                <rect>73,87,145,174</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -215,13 +249,35 @@
         </map>
         <key>fileList</key>
         <array>
-            <filename>exports/background/background_1_trees.png</filename>
-            <filename>exports/background/background_2_trees.png</filename>
-            <filename>exports/background/background_3_trees.png</filename>
-            <filename>exports/background/background_4_mountain.png</filename>
-            <filename>exports/background/background_5_clouds.png</filename>
-            <filename>exports/background/background_6_sky.png</filename>
             <filename>exports/ground.png</filename>
+            <filename>exports/background_1_trees.png</filename>
+            <filename>exports/background_2_trees.png</filename>
+            <filename>exports/background_3_trees.png</filename>
+            <filename>exports/background_4_mountain.png</filename>
+            <filename>exports/background_5_clouds.png</filename>
+            <filename>exports/background_6_sky.png</filename>
+            <filename>exports/girl_idle_1.png</filename>
+            <filename>exports/girl_idle_2.png</filename>
+            <filename>exports/girl_idle_3.png</filename>
+            <filename>exports/girl_idle_4.png</filename>
+            <filename>exports/girl_jump_1.png</filename>
+            <filename>exports/girl_jump_2.png</filename>
+            <filename>exports/girl_jump_3.png</filename>
+            <filename>exports/girl_jump_4.png</filename>
+            <filename>exports/girl_jump_5.png</filename>
+            <filename>exports/girl_jump_6.png</filename>
+            <filename>exports/girl_run_1.png</filename>
+            <filename>exports/girl_run_2.png</filename>
+            <filename>exports/girl_run_3.png</filename>
+            <filename>exports/girl_run_4.png</filename>
+            <filename>exports/girl_run_5.png</filename>
+            <filename>exports/girl_run_6.png</filename>
+            <filename>exports/girl_walk_1.png</filename>
+            <filename>exports/girl_walk_2.png</filename>
+            <filename>exports/girl_walk_3.png</filename>
+            <filename>exports/girl_walk_4.png</filename>
+            <filename>exports/girl_walk_5.png</filename>
+            <filename>exports/girl_walk_6.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

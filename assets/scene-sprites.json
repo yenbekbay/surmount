@@ -79,7 +79,7 @@
       "format": "RGBA8888",
       "size": {
         "w": 2048,
-        "h": 1711
+        "h": 2044
       },
       "scale": 1,
       "frames": [
@@ -166,6 +166,479 @@
             "w": 1920,
             "h": 399
           }
+        },
+        {
+          "filename": "girl_run_1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 17,
+            "w": 232,
+            "h": 331
+          },
+          "frame": {
+            "x": 1,
+            "y": 1712,
+            "w": 232,
+            "h": 331
+          }
+        },
+        {
+          "filename": "girl_run_4.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 17,
+            "w": 232,
+            "h": 331
+          },
+          "frame": {
+            "x": 235,
+            "y": 1712,
+            "w": 232,
+            "h": 331
+          }
+        },
+        {
+          "filename": "girl_jump_4.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 21,
+            "w": 290,
+            "h": 327
+          },
+          "frame": {
+            "x": 469,
+            "y": 1712,
+            "w": 290,
+            "h": 327
+          }
+        },
+        {
+          "filename": "girl_jump_3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 21,
+            "w": 278,
+            "h": 327
+          },
+          "frame": {
+            "x": 761,
+            "y": 1712,
+            "w": 278,
+            "h": 327
+          }
+        },
+        {
+          "filename": "girl_jump_2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 25,
+            "w": 256,
+            "h": 323
+          },
+          "frame": {
+            "x": 1041,
+            "y": 1712,
+            "w": 256,
+            "h": 323
+          }
+        },
+        {
+          "filename": "girl_jump_5.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 29,
+            "w": 272,
+            "h": 319
+          },
+          "frame": {
+            "x": 1299,
+            "y": 1712,
+            "w": 272,
+            "h": 319
+          }
+        },
+        {
+          "filename": "girl_jump_6.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 39,
+            "w": 267,
+            "h": 309
+          },
+          "frame": {
+            "x": 1573,
+            "y": 1712,
+            "w": 267,
+            "h": 309
+          }
+        }
+      ]
+    },
+    {
+      "image": "scene-sprites-2.png",
+      "format": "RGBA8888",
+      "size": {
+        "w": 710,
+        "h": 1723
+      },
+      "scale": 1,
+      "frames": [
+        {
+          "filename": "girl_run_2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 1,
+            "w": 241,
+            "h": 347
+          },
+          "frame": {
+            "x": 1,
+            "y": 1,
+            "w": 241,
+            "h": 347
+          }
+        },
+        {
+          "filename": "girl_run_5.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 1,
+            "w": 241,
+            "h": 347
+          },
+          "frame": {
+            "x": 1,
+            "y": 350,
+            "w": 241,
+            "h": 347
+          }
+        },
+        {
+          "filename": "girl_walk_1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 1,
+            "w": 233,
+            "h": 347
+          },
+          "frame": {
+            "x": 1,
+            "y": 699,
+            "w": 233,
+            "h": 347
+          }
+        },
+        {
+          "filename": "girl_run_3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 7,
+            "w": 251,
+            "h": 341
+          },
+          "frame": {
+            "x": 1,
+            "y": 1048,
+            "w": 251,
+            "h": 341
+          }
+        },
+        {
+          "filename": "girl_run_6.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 7,
+            "w": 251,
+            "h": 341
+          },
+          "frame": {
+            "x": 236,
+            "y": 699,
+            "w": 251,
+            "h": 341
+          }
+        },
+        {
+          "filename": "girl_walk_4.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 1,
+            "w": 233,
+            "h": 347
+          },
+          "frame": {
+            "x": 254,
+            "y": 1042,
+            "w": 233,
+            "h": 347
+          }
+        },
+        {
+          "filename": "girl_walk_2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 5,
+            "w": 242,
+            "h": 343
+          },
+          "frame": {
+            "x": 244,
+            "y": 1,
+            "w": 242,
+            "h": 343
+          }
+        },
+        {
+          "filename": "girl_walk_5.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 5,
+            "w": 242,
+            "h": 343
+          },
+          "frame": {
+            "x": 244,
+            "y": 346,
+            "w": 242,
+            "h": 343
+          }
+        },
+        {
+          "filename": "girl_walk_3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 5,
+            "w": 221,
+            "h": 343
+          },
+          "frame": {
+            "x": 488,
+            "y": 1,
+            "w": 221,
+            "h": 343
+          }
+        },
+        {
+          "filename": "girl_walk_6.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 5,
+            "w": 221,
+            "h": 343
+          },
+          "frame": {
+            "x": 488,
+            "y": 346,
+            "w": 221,
+            "h": 343
+          }
+        },
+        {
+          "filename": "girl_jump_1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 23,
+            "w": 224,
+            "h": 325
+          },
+          "frame": {
+            "x": 1,
+            "y": 1391,
+            "w": 224,
+            "h": 325
+          }
+        },
+        {
+          "filename": "girl_idle_3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 15,
+            "w": 222,
+            "h": 331
+          },
+          "frame": {
+            "x": 227,
+            "y": 1391,
+            "w": 222,
+            "h": 331
+          }
+        },
+        {
+          "filename": "girl_idle_4.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 17,
+            "w": 222,
+            "h": 331
+          },
+          "frame": {
+            "x": 451,
+            "y": 1391,
+            "w": 222,
+            "h": 331
+          }
+        },
+        {
+          "filename": "girl_idle_2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 13,
+            "w": 220,
+            "h": 333
+          },
+          "frame": {
+            "x": 489,
+            "y": 691,
+            "w": 220,
+            "h": 333
+          }
+        },
+        {
+          "filename": "girl_idle_1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 3,
+            "y": 17,
+            "w": 215,
+            "h": 330
+          },
+          "frame": {
+            "x": 489,
+            "y": 1026,
+            "w": 215,
+            "h": 330
+          }
         }
       ]
     }
@@ -173,6 +646,6 @@
   "meta": {
     "app": "https://www.codeandweb.com/texturepacker",
     "version": "3.0",
-    "smartupdate": "$TexturePacker:SmartUpdate:78f0651c21a9e3aec02947d53ecde923:f24dd24803ae645f30116da9dc485c97:cfb4ff7d3588fc2ca787fa57c4aa3ec0$"
+    "smartupdate": "$TexturePacker:SmartUpdate:daf296cc25d6d72a51d344eeb63b5011:f2401299cbade1e9580734c95b4b8e4c:97dd2f12be59a7feae69aab6171f3619$"
   }
 }
