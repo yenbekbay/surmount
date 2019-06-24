@@ -25,6 +25,16 @@ const verticesForShape = (
 const vertexAtPoint = (x: number, vertices: {x: number; y: number}[]) =>
   [...vertices].sort((a, b) => Math.abs(x - a.x) - Math.abs(x - b.x))[0];
 
+const BACKGROUND_SKY_COLOR = '#edf1f4';
+const BACKGROUND_FILENAMES = [
+  'background_6_sky.png',
+  'background_5_clouds.png',
+  'background_4_mountain.png',
+  'background_3_trees.png',
+  'background_2_trees.png',
+  'background_1_trees.png',
+] as const;
+
 export const initPhaser = ({
   element,
   windowSize,
@@ -32,6 +42,10 @@ export const initPhaser = ({
   element: HTMLDivElement;
   windowSize: {width: number; height: number};
 }) => {
+  let background: {
+    [filename in (typeof BACKGROUND_FILENAMES)[number]]?: Phaser.GameObjects.Image;
+  } = {};
+  let ground: Phaser.Physics.Matter.Image | null = null;
   let girl: Phaser.Physics.Matter.Sprite | null = null;
   let cursors: Phaser.Types.Input.Keyboard.CursorKeys | null = null;
 
@@ -39,7 +53,7 @@ export const initPhaser = ({
     type: Phaser.AUTO,
     width: windowSize.width,
     height: windowSize.height,
-    backgroundColor: '#fff',
+    backgroundColor: BACKGROUND_SKY_COLOR,
     parent: element,
     render: {
       // pixelArt: true,
@@ -61,32 +75,20 @@ export const initPhaser = ({
         const sceneShapes = this.cache.json.get('scene-shapes');
 
         // add background
-        [
-          'background_6_sky.png',
-          'background_5_clouds.png',
-          'background_4_mountain.png',
-          'background_3_trees.png',
-          'background_2_trees.png',
-          'background_1_trees.png',
-        ].forEach(filename => {
+        BACKGROUND_FILENAMES.forEach(filename => {
           const sprite = this.add
             .image(0, 0, 'scene-sprites', filename)
             .setOrigin(0, 0)
             .setScrollFactor(0);
           const spriteScale = windowSize.height / sprite.height;
           sprite.setScale(spriteScale);
+          background[filename] = sprite;
         });
 
         // add ground
-        const ground = this.matter.add.image(
-          0,
-          0,
-          'scene-sprites',
-          'ground.png',
-          {
-            shape: sceneShapes.ground,
-          },
-        );
+        ground = this.matter.add.image(0, 0, 'scene-sprites', 'ground.png', {
+          shape: sceneShapes.ground,
+        });
         const groundScale = windowSize.height / 2 / ground.height;
         const groundVertices = verticesForShape(sceneShapes.ground, {
           scale: groundScale,
@@ -152,10 +154,10 @@ export const initPhaser = ({
         this.cameras.main.startFollow(girl);
 
         // set background color, so the sky is not black
-        this.cameras.main.setBackgroundColor('#ccccff');
+        this.cameras.main.setBackgroundColor(BACKGROUND_SKY_COLOR);
       },
-      update(_time, _delta) {
-        if (!girl || !cursors) return;
+      update(this: Phaser.Scene, _time, _delta) {
+        if (!ground || !girl || !cursors) return;
 
         if (cursors.left && cursors.left.isDown) {
           girl.setVelocityX(-10); // move left
@@ -171,6 +173,19 @@ export const initPhaser = ({
           girl.setVelocityX(0);
           girl.anims.play('girl_idle', true);
         }
+
+        // adjust background positions for parallax effect
+        BACKGROUND_FILENAMES.forEach((filename, idx) => {
+          const sprite = background[filename];
+          if (sprite && ground) {
+            const parallaxFactor =
+              0.1 * Math.pow(0.3, BACKGROUND_FILENAMES.length - idx);
+
+            sprite.x =
+              -(ground.width - windowSize.width) * parallaxFactor +
+              this.cameras.main.scrollX * parallaxFactor;
+          }
+        });
       },
     },
   });
