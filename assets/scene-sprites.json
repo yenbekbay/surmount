@@ -78,11 +78,32 @@
       "image": "scene-sprites-1.png",
       "format": "RGBA8888",
       "size": {
-        "w": 2022,
-        "h": 1978
+        "w": 1922,
+        "h": 2033
       },
       "scale": 1,
       "frames": [
+        {
+          "filename": "smog.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 1920,
+            "h": 1080
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 1920,
+            "h": 1080
+          },
+          "frame": {
+            "x": 1,
+            "y": 1,
+            "w": 1920,
+            "h": 1080
+          }
+        },
         {
           "filename": "background_3_trees.png",
           "rotated": false,
@@ -99,7 +120,7 @@
           },
           "frame": {
             "x": 1,
-            "y": 1,
+            "y": 1083,
             "w": 1920,
             "h": 478
           }
@@ -120,11 +141,22 @@
           },
           "frame": {
             "x": 1,
-            "y": 481,
+            "y": 1563,
             "w": 1920,
             "h": 469
           }
-        },
+        }
+      ]
+    },
+    {
+      "image": "scene-sprites-2.png",
+      "format": "RGBA8888",
+      "size": {
+        "w": 2029,
+        "h": 1985
+      },
+      "scale": 1,
+      "frames": [
         {
           "filename": "ground_8.png",
           "rotated": false,
@@ -141,9 +173,30 @@
           },
           "frame": {
             "x": 1,
-            "y": 952,
+            "y": 1,
             "w": 1024,
             "h": 1024
+          }
+        },
+        {
+          "filename": "background_1_trees.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 1920,
+            "h": 1080
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 681,
+            "w": 1920,
+            "h": 399
+          },
+          "frame": {
+            "x": 1,
+            "y": 1027,
+            "w": 1920,
+            "h": 399
           }
         },
         {
@@ -162,7 +215,7 @@
           },
           "frame": {
             "x": 1027,
-            "y": 952,
+            "y": 1,
             "w": 290,
             "h": 327
           }
@@ -182,14 +235,14 @@
             "h": 347
           },
           "frame": {
-            "x": 1027,
-            "y": 1281,
+            "x": 1319,
+            "y": 1,
             "w": 241,
             "h": 347
           }
         },
         {
-          "filename": "girl_walk_1.png",
+          "filename": "girl_run_5.png",
           "rotated": false,
           "trimmed": true,
           "sourceSize": {
@@ -199,56 +252,14 @@
           "spriteSourceSize": {
             "x": 0,
             "y": 1,
-            "w": 233,
+            "w": 241,
             "h": 347
           },
           "frame": {
             "x": 1027,
-            "y": 1630,
-            "w": 233,
+            "y": 330,
+            "w": 241,
             "h": 347
-          }
-        },
-        {
-          "filename": "girl_run_3.png",
-          "rotated": false,
-          "trimmed": true,
-          "sourceSize": {
-            "w": 290,
-            "h": 348
-          },
-          "spriteSourceSize": {
-            "x": 0,
-            "y": 7,
-            "w": 251,
-            "h": 341
-          },
-          "frame": {
-            "x": 1262,
-            "y": 1630,
-            "w": 251,
-            "h": 341
-          }
-        },
-        {
-          "filename": "girl_run_6.png",
-          "rotated": false,
-          "trimmed": true,
-          "sourceSize": {
-            "w": 290,
-            "h": 348
-          },
-          "spriteSourceSize": {
-            "x": 0,
-            "y": 7,
-            "w": 251,
-            "h": 341
-          },
-          "frame": {
-            "x": 1270,
-            "y": 1281,
-            "w": 251,
-            "h": 341
           }
         },
         {
@@ -266,14 +277,14 @@
             "h": 327
           },
           "frame": {
-            "x": 1319,
-            "y": 952,
+            "x": 1270,
+            "y": 350,
             "w": 278,
             "h": 327
           }
         },
         {
-          "filename": "girl_run_1.png",
+          "filename": "girl_walk_1.png",
           "rotated": false,
           "trimmed": true,
           "sourceSize": {
@@ -282,57 +293,15 @@
           },
           "spriteSourceSize": {
             "x": 0,
-            "y": 17,
-            "w": 232,
-            "h": 331
+            "y": 1,
+            "w": 233,
+            "h": 347
           },
           "frame": {
-            "x": 1515,
-            "y": 1624,
-            "w": 232,
-            "h": 331
-          }
-        },
-        {
-          "filename": "girl_jump_1.png",
-          "rotated": false,
-          "trimmed": true,
-          "sourceSize": {
-            "w": 290,
-            "h": 348
-          },
-          "spriteSourceSize": {
-            "x": 0,
-            "y": 23,
-            "w": 224,
-            "h": 325
-          },
-          "frame": {
-            "x": 1523,
-            "y": 1281,
-            "w": 224,
-            "h": 325
-          }
-        },
-        {
-          "filename": "girl_jump_2.png",
-          "rotated": false,
-          "trimmed": true,
-          "sourceSize": {
-            "w": 290,
-            "h": 348
-          },
-          "spriteSourceSize": {
-            "x": 0,
-            "y": 25,
-            "w": 256,
-            "h": 323
-          },
-          "frame": {
-            "x": 1599,
-            "y": 952,
-            "w": 256,
-            "h": 323
+            "x": 1550,
+            "y": 350,
+            "w": 233,
+            "h": 347
           }
         },
         {
@@ -350,8 +319,8 @@
             "h": 319
           },
           "frame": {
-            "x": 1749,
-            "y": 1277,
+            "x": 1562,
+            "y": 1,
             "w": 272,
             "h": 319
           }
@@ -371,63 +340,94 @@
             "h": 309
           },
           "frame": {
-            "x": 1749,
-            "y": 1598,
+            "x": 1027,
+            "y": 679,
             "w": 267,
             "h": 309
           }
-        }
-      ]
-    },
-    {
-      "image": "scene-sprites-2.png",
-      "format": "RGBA8888",
-      "size": {
-        "w": 1922,
-        "h": 2011
-      },
-      "scale": 1,
-      "frames": [
+        },
         {
-          "filename": "background_1_trees.png",
+          "filename": "girl_run_3.png",
           "rotated": false,
           "trimmed": true,
           "sourceSize": {
-            "w": 1920,
-            "h": 1080
+            "w": 290,
+            "h": 348
           },
           "spriteSourceSize": {
             "x": 0,
-            "y": 681,
-            "w": 1920,
-            "h": 399
+            "y": 7,
+            "w": 251,
+            "h": 341
           },
           "frame": {
-            "x": 1,
-            "y": 1,
-            "w": 1920,
-            "h": 399
+            "x": 1296,
+            "y": 679,
+            "w": 251,
+            "h": 341
           }
         },
         {
-          "filename": "ground_7.png",
+          "filename": "girl_jump_2.png",
           "rotated": false,
           "trimmed": true,
           "sourceSize": {
-            "w": 1024,
-            "h": 1024
+            "w": 290,
+            "h": 348
           },
           "spriteSourceSize": {
             "x": 0,
-            "y": 213,
-            "w": 1024,
-            "h": 811
+            "y": 25,
+            "w": 256,
+            "h": 323
           },
           "frame": {
-            "x": 1,
-            "y": 402,
-            "w": 1024,
-            "h": 811
+            "x": 1549,
+            "y": 699,
+            "w": 256,
+            "h": 323
+          }
+        },
+        {
+          "filename": "girl_walk_4.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 1,
+            "w": 233,
+            "h": 347
+          },
+          "frame": {
+            "x": 1785,
+            "y": 322,
+            "w": 233,
+            "h": 347
+          }
+        },
+        {
+          "filename": "girl_walk_3.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 5,
+            "w": 221,
+            "h": 343
+          },
+          "frame": {
+            "x": 1807,
+            "y": 671,
+            "w": 221,
+            "h": 343
           }
         },
         {
@@ -446,30 +446,30 @@
           },
           "frame": {
             "x": 1,
-            "y": 1215,
+            "y": 1428,
             "w": 1024,
             "h": 556
           }
         },
         {
-          "filename": "ground_2.png",
+          "filename": "girl_run_6.png",
           "rotated": false,
           "trimmed": true,
           "sourceSize": {
-            "w": 1024,
-            "h": 1024
+            "w": 290,
+            "h": 348
           },
           "spriteSourceSize": {
             "x": 0,
-            "y": 787,
-            "w": 1024,
-            "h": 237
+            "y": 7,
+            "w": 251,
+            "h": 341
           },
           "frame": {
-            "x": 1,
-            "y": 1773,
-            "w": 1024,
-            "h": 237
+            "x": 1027,
+            "y": 1428,
+            "w": 251,
+            "h": 341
           }
         },
         {
@@ -487,8 +487,8 @@
             "h": 343
           },
           "frame": {
-            "x": 1027,
-            "y": 402,
+            "x": 1280,
+            "y": 1428,
             "w": 242,
             "h": 343
           }
@@ -508,135 +508,9 @@
             "h": 343
           },
           "frame": {
-            "x": 1271,
-            "y": 402,
+            "x": 1524,
+            "y": 1428,
             "w": 242,
-            "h": 343
-          }
-        },
-        {
-          "filename": "girl_run_5.png",
-          "rotated": false,
-          "trimmed": true,
-          "sourceSize": {
-            "w": 290,
-            "h": 348
-          },
-          "spriteSourceSize": {
-            "x": 0,
-            "y": 1,
-            "w": 241,
-            "h": 347
-          },
-          "frame": {
-            "x": 1515,
-            "y": 402,
-            "w": 241,
-            "h": 347
-          }
-        },
-        {
-          "filename": "girl_walk_4.png",
-          "rotated": false,
-          "trimmed": true,
-          "sourceSize": {
-            "w": 290,
-            "h": 348
-          },
-          "spriteSourceSize": {
-            "x": 0,
-            "y": 1,
-            "w": 233,
-            "h": 347
-          },
-          "frame": {
-            "x": 1027,
-            "y": 747,
-            "w": 233,
-            "h": 347
-          }
-        },
-        {
-          "filename": "girl_run_4.png",
-          "rotated": false,
-          "trimmed": true,
-          "sourceSize": {
-            "w": 290,
-            "h": 348
-          },
-          "spriteSourceSize": {
-            "x": 0,
-            "y": 17,
-            "w": 232,
-            "h": 331
-          },
-          "frame": {
-            "x": 1262,
-            "y": 747,
-            "w": 232,
-            "h": 331
-          }
-        },
-        {
-          "filename": "girl_idle_3.png",
-          "rotated": false,
-          "trimmed": true,
-          "sourceSize": {
-            "w": 290,
-            "h": 348
-          },
-          "spriteSourceSize": {
-            "x": 0,
-            "y": 15,
-            "w": 222,
-            "h": 331
-          },
-          "frame": {
-            "x": 1496,
-            "y": 751,
-            "w": 222,
-            "h": 331
-          }
-        },
-        {
-          "filename": "girl_idle_4.png",
-          "rotated": false,
-          "trimmed": true,
-          "sourceSize": {
-            "w": 290,
-            "h": 348
-          },
-          "spriteSourceSize": {
-            "x": 0,
-            "y": 17,
-            "w": 222,
-            "h": 331
-          },
-          "frame": {
-            "x": 1262,
-            "y": 1080,
-            "w": 222,
-            "h": 331
-          }
-        },
-        {
-          "filename": "girl_walk_3.png",
-          "rotated": false,
-          "trimmed": true,
-          "sourceSize": {
-            "w": 290,
-            "h": 348
-          },
-          "spriteSourceSize": {
-            "x": 0,
-            "y": 5,
-            "w": 221,
-            "h": 343
-          },
-          "frame": {
-            "x": 1027,
-            "y": 1096,
-            "w": 221,
             "h": 343
           }
         },
@@ -655,14 +529,46 @@
             "h": 343
           },
           "frame": {
-            "x": 1486,
-            "y": 1084,
+            "x": 1768,
+            "y": 1428,
             "w": 221,
             "h": 343
           }
+        }
+      ]
+    },
+    {
+      "image": "scene-sprites-3.png",
+      "format": "RGBA8888",
+      "size": {
+        "w": 1472,
+        "h": 1941
+      },
+      "scale": 1,
+      "frames": [
+        {
+          "filename": "ground_7.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 1024,
+            "h": 1024
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 213,
+            "w": 1024,
+            "h": 811
+          },
+          "frame": {
+            "x": 1,
+            "y": 1,
+            "w": 1024,
+            "h": 811
+          }
         },
         {
-          "filename": "girl_idle_2.png",
+          "filename": "girl_run_1.png",
           "rotated": false,
           "trimmed": true,
           "sourceSize": {
@@ -671,15 +577,78 @@
           },
           "spriteSourceSize": {
             "x": 0,
-            "y": 13,
-            "w": 220,
-            "h": 333
+            "y": 17,
+            "w": 232,
+            "h": 331
           },
           "frame": {
-            "x": 1250,
-            "y": 1413,
-            "w": 220,
-            "h": 333
+            "x": 1027,
+            "y": 1,
+            "w": 232,
+            "h": 331
+          }
+        },
+        {
+          "filename": "girl_run_4.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 17,
+            "w": 232,
+            "h": 331
+          },
+          "frame": {
+            "x": 1027,
+            "y": 334,
+            "w": 232,
+            "h": 331
+          }
+        },
+        {
+          "filename": "girl_jump_1.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 23,
+            "w": 224,
+            "h": 325
+          },
+          "frame": {
+            "x": 1027,
+            "y": 667,
+            "w": 224,
+            "h": 325
+          }
+        },
+        {
+          "filename": "ground_5.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 1024,
+            "h": 1024
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 592,
+            "w": 1024,
+            "h": 432
+          },
+          "frame": {
+            "x": 1,
+            "y": 814,
+            "w": 1024,
+            "h": 432
           }
         },
         {
@@ -697,42 +666,31 @@
             "h": 330
           },
           "frame": {
-            "x": 1027,
-            "y": 1441,
+            "x": 1253,
+            "y": 667,
             "w": 215,
             "h": 330
           }
-        }
-      ]
-    },
-    {
-      "image": "scene-sprites-3.png",
-      "format": "RGBA8888",
-      "size": {
-        "w": 1026,
-        "h": 1325
-      },
-      "scale": 1,
-      "frames": [
+        },
         {
-          "filename": "ground_5.png",
+          "filename": "girl_idle_3.png",
           "rotated": false,
           "trimmed": true,
           "sourceSize": {
-            "w": 1024,
-            "h": 1024
+            "w": 290,
+            "h": 348
           },
           "spriteSourceSize": {
             "x": 0,
-            "y": 592,
-            "w": 1024,
-            "h": 432
+            "y": 15,
+            "w": 222,
+            "h": 331
           },
           "frame": {
-            "x": 1,
-            "y": 1,
-            "w": 1024,
-            "h": 432
+            "x": 1027,
+            "y": 994,
+            "w": 222,
+            "h": 331
           }
         },
         {
@@ -751,7 +709,7 @@
           },
           "frame": {
             "x": 1,
-            "y": 435,
+            "y": 1248,
             "w": 1024,
             "h": 386
           }
@@ -772,9 +730,83 @@
           },
           "frame": {
             "x": 1,
-            "y": 823,
+            "y": 1636,
             "w": 1024,
             "h": 304
+          }
+        },
+        {
+          "filename": "girl_idle_2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 13,
+            "w": 220,
+            "h": 333
+          },
+          "frame": {
+            "x": 1251,
+            "y": 999,
+            "w": 220,
+            "h": 333
+          }
+        },
+        {
+          "filename": "girl_idle_4.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 290,
+            "h": 348
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 17,
+            "w": 222,
+            "h": 331
+          },
+          "frame": {
+            "x": 1027,
+            "y": 1327,
+            "w": 222,
+            "h": 331
+          }
+        }
+      ]
+    },
+    {
+      "image": "scene-sprites-4.png",
+      "format": "RGBA8888",
+      "size": {
+        "w": 1026,
+        "h": 436
+      },
+      "scale": 1,
+      "frames": [
+        {
+          "filename": "ground_2.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 1024,
+            "h": 1024
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 787,
+            "w": 1024,
+            "h": 237
+          },
+          "frame": {
+            "x": 1,
+            "y": 1,
+            "w": 1024,
+            "h": 237
           }
         },
         {
@@ -793,7 +825,7 @@
           },
           "frame": {
             "x": 1,
-            "y": 1129,
+            "y": 240,
             "w": 1024,
             "h": 195
           }
@@ -804,6 +836,6 @@
   "meta": {
     "app": "https://www.codeandweb.com/texturepacker",
     "version": "3.0",
-    "smartupdate": "$TexturePacker:SmartUpdate:00d615cd0696251b7ec9b0631a0d1b18:ea0d389b0cc34610543034123abe8f97:caeb873157ac622994debd950d0d090e$"
+    "smartupdate": "$TexturePacker:SmartUpdate:c46d8db6247450755d7e6bae0117fb2a:60b14460aa20325900287224ebee6448:ffdb9c6c7634ecb241201c7f3c5abebe$"
   }
 }

@@ -47,6 +47,7 @@ export const initPhaser = ({
   windowSize: {width: number; height: number};
 }) => {
   let background: Phaser.GameObjects.Image[] | null = null;
+  let smog: Phaser.GameObjects.Image | null = null;
   let ground: Phaser.Physics.Matter.Image[] | null = null;
   let girl: Phaser.Physics.Matter.Sprite | null = null;
   let cursors: Phaser.Types.Input.Keyboard.CursorKeys | null = null;
@@ -87,6 +88,14 @@ export const initPhaser = ({
 
           return sprite;
         });
+
+        // add smog
+        smog = this.add
+          .image(0, 0, 'scene-sprites', 'smog.png')
+          .setOrigin(0, 0)
+          .setScrollFactor(0);
+        const smogScale = windowSize.height / smog.height;
+        smog.setScale(smogScale);
 
         // add ground
         ground = GROUND_FILENAMES.reduce<Phaser.Physics.Matter.Image[]>(
@@ -191,7 +200,7 @@ export const initPhaser = ({
         this.cameras.main.setBackgroundColor(BACKGROUND_SKY_COLOR);
       },
       update(this: Phaser.Scene, _time, _delta) {
-        if (!background || !ground || !girl || !cursors) return;
+        if (!background || !smog || !ground || !girl || !cursors) return;
 
         if (cursors.left && cursors.left.isDown) {
           girl.setVelocityX(-10); // move left
@@ -227,6 +236,10 @@ export const initPhaser = ({
             -(groundSize.width - windowSize.width) * parallaxFactor +
             this.cameras.main.scrollX * parallaxFactor;
         });
+
+        // adjust opacity for smog
+        smog.alpha =
+          1 - this.cameras.main.scrollX / (groundSize.width - windowSize.width);
       },
     },
   });

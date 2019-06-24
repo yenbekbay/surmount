@@ -187,6 +187,7 @@
             <key type="filename">exports/background_4_mountain.png</key>
             <key type="filename">exports/background_5_clouds.png</key>
             <key type="filename">exports/background_6_sky.png</key>
+            <key type="filename">exports/smog.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -292,6 +293,7 @@
             <filename>exports/ground_6.png</filename>
             <filename>exports/ground_7.png</filename>
             <filename>exports/ground_8.png</filename>
+            <filename>exports/smog.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
