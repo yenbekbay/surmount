@@ -233,23 +233,29 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">exports/ground.png</key>
+            <key type="filename">exports/ground_1.png</key>
+            <key type="filename">exports/ground_2.png</key>
+            <key type="filename">exports/ground_3.png</key>
+            <key type="filename">exports/ground_4.png</key>
+            <key type="filename">exports/ground_5.png</key>
+            <key type="filename">exports/ground_6.png</key>
+            <key type="filename">exports/ground_7.png</key>
+            <key type="filename">exports/ground_8.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>512,89,1023,179</rect>
+                <rect>256,256,512,512</rect>
                 <key>scale9Paddings</key>
-                <rect>512,89,1023,179</rect>
+                <rect>256,256,512,512</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
         </map>
         <key>fileList</key>
         <array>
-            <filename>exports/ground.png</filename>
             <filename>exports/background_1_trees.png</filename>
             <filename>exports/background_2_trees.png</filename>
             <filename>exports/background_3_trees.png</filename>
@@ -278,6 +284,14 @@
             <filename>exports/girl_walk_4.png</filename>
             <filename>exports/girl_walk_5.png</filename>
             <filename>exports/girl_walk_6.png</filename>
+            <filename>exports/ground_1.png</filename>
+            <filename>exports/ground_2.png</filename>
+            <filename>exports/ground_3.png</filename>
+            <filename>exports/ground_4.png</filename>
+            <filename>exports/ground_5.png</filename>
+            <filename>exports/ground_6.png</filename>
+            <filename>exports/ground_7.png</filename>
+            <filename>exports/ground_8.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

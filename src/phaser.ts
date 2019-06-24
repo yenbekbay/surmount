@@ -34,6 +34,10 @@ const BACKGROUND_FILENAMES = [
   'background_2_trees.png',
   'background_1_trees.png',
 ] as const;
+const GROUND_FILENAMES = Array.from(
+  {length: 8},
+  (_, idx) => `ground_${idx + 1}.png`,
+);
 
 export const initPhaser = ({
   element,
@@ -42,10 +46,8 @@ export const initPhaser = ({
   element: HTMLDivElement;
   windowSize: {width: number; height: number};
 }) => {
-  let background: {
-    [filename in (typeof BACKGROUND_FILENAMES)[number]]?: Phaser.GameObjects.Image;
-  } = {};
-  let ground: Phaser.Physics.Matter.Image | null = null;
+  let background: Phaser.GameObjects.Image[] | null = null;
+  let ground: Phaser.Physics.Matter.Image[] | null = null;
   let girl: Phaser.Physics.Matter.Sprite | null = null;
   let cursors: Phaser.Types.Input.Keyboard.CursorKeys | null = null;
 
@@ -62,7 +64,6 @@ export const initPhaser = ({
       default: 'matter',
       matter: {
         gravity: {y: 1},
-        // debug: true,
       },
     },
     scene: {
@@ -75,29 +76,49 @@ export const initPhaser = ({
         const sceneShapes = this.cache.json.get('scene-shapes');
 
         // add background
-        BACKGROUND_FILENAMES.forEach(filename => {
+        background = BACKGROUND_FILENAMES.map(filename => {
           const sprite = this.add
             .image(0, 0, 'scene-sprites', filename)
             .setOrigin(0, 0)
             .setScrollFactor(0);
+
           const spriteScale = windowSize.height / sprite.height;
           sprite.setScale(spriteScale);
-          background[filename] = sprite;
+
+          return sprite;
         });
 
         // add ground
-        ground = this.matter.add.image(0, 0, 'scene-sprites', 'ground.png', {
-          shape: sceneShapes.ground,
-        });
-        const groundScale = windowSize.height / 2 / ground.height;
-        const groundVertices = verticesForShape(sceneShapes.ground, {
-          scale: groundScale,
-          constant: {x: 0, y: windowSize.height / 2},
-        });
-        ground.setScale(groundScale);
-        ground.setPosition(
-          ground.centerOfMass.x * groundScale,
-          windowSize.height / 2 + ground.centerOfMass.y * groundScale,
+        ground = GROUND_FILENAMES.reduce<Phaser.Physics.Matter.Image[]>(
+          (acc, filename, idx) => {
+            const prevSprite = acc[idx - 1];
+
+            const sprite = this.matter.add.image(
+              0,
+              0,
+              'scene-sprites',
+              filename,
+              {shape: sceneShapes[filename]},
+            );
+
+            const spriteScale = prevSprite
+              ? prevSprite.scale
+              : windowSize.height / 2 / sprite.height;
+            sprite.setScale(spriteScale);
+
+            sprite.setPosition(
+              (prevSprite
+                ? prevSprite.x -
+                  prevSprite.centerOfMass.x * spriteScale +
+                  prevSprite.width * spriteScale
+                : 0) +
+                sprite.centerOfMass.x * spriteScale,
+              windowSize.height / 2 + sprite.centerOfMass.y * spriteScale,
+            );
+
+            return [...acc, sprite];
+          },
+          [],
         );
 
         // add girl
@@ -135,12 +156,15 @@ export const initPhaser = ({
         const girlScale = windowSize.height / 4 / girl.height;
         girl.setScale(girlScale);
         const girlOnGroundPosition = vertexAtPoint(
-          0 + girl.width,
-          groundVertices,
+          0 + girl.width * girlScale,
+          verticesForShape(sceneShapes[GROUND_FILENAMES[0]], {
+            scale: ground[0].scale,
+            constant: {x: 0, y: windowSize.height / 2},
+          }),
         );
         girl.setPosition(
-          girlOnGroundPosition.x - girl.centerOfMass.x,
-          girlOnGroundPosition.y - girl.centerOfMass.y,
+          girlOnGroundPosition.x - girl.centerOfMass.x * girlScale,
+          girlOnGroundPosition.y - girl.centerOfMass.y * girlScale,
         );
         girl.play('girl_idle');
 
@@ -148,8 +172,18 @@ export const initPhaser = ({
         cursors = this.input.keyboard.createCursorKeys();
 
         // set bounds so the camera won't go outside the world
-        this.matter.world.setBounds(0, 0, ground.width, windowSize.height);
-        this.cameras.main.setBounds(0, 0, ground.width, windowSize.height);
+        const groundSize = {
+          width: ground.reduce(
+            (acc, sprite) => acc + sprite.width * sprite.scale,
+            0,
+          ),
+          height: ground.reduce(
+            (acc, sprite) => Math.max(acc, sprite.height * sprite.scale),
+            0,
+          ),
+        };
+        this.matter.world.setBounds(0, 0, groundSize.width, windowSize.height);
+        this.cameras.main.setBounds(0, 0, groundSize.width, windowSize.height);
         // make the camera follow the girl
         this.cameras.main.startFollow(girl);
 
@@ -157,7 +191,7 @@ export const initPhaser = ({
         this.cameras.main.setBackgroundColor(BACKGROUND_SKY_COLOR);
       },
       update(this: Phaser.Scene, _time, _delta) {
-        if (!ground || !girl || !cursors) return;
+        if (!background || !ground || !girl || !cursors) return;
 
         if (cursors.left && cursors.left.isDown) {
           girl.setVelocityX(-10); // move left
@@ -175,16 +209,23 @@ export const initPhaser = ({
         }
 
         // adjust background positions for parallax effect
-        BACKGROUND_FILENAMES.forEach((filename, idx) => {
-          const sprite = background[filename];
-          if (sprite && ground) {
-            const parallaxFactor =
-              0.1 * Math.pow(0.3, BACKGROUND_FILENAMES.length - idx);
+        const groundSize = {
+          width: ground.reduce(
+            (acc, sprite) => acc + sprite.width * sprite.scale,
+            0,
+          ),
+          height: ground.reduce(
+            (acc, sprite) => Math.max(acc, sprite.height * sprite.scale),
+            0,
+          ),
+        };
+        background.forEach((sprite, idx) => {
+          const parallaxFactor =
+            0.05 * Math.pow(0.3, BACKGROUND_FILENAMES.length - idx);
 
-            sprite.x =
-              -(ground.width - windowSize.width) * parallaxFactor +
-              this.cameras.main.scrollX * parallaxFactor;
-          }
+          sprite.x =
+            -(groundSize.width - windowSize.width) * parallaxFactor +
+            this.cameras.main.scrollX * parallaxFactor;
         });
       },
     },
