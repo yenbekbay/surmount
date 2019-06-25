@@ -44,9 +44,11 @@ const GROUND_FILENAMES = Array.from(
 export const initPhaser = ({
   element,
   windowSize,
+  onLoadComplete,
 }: {
   element: HTMLDivElement;
   windowSize: {width: number; height: number};
+  onLoadComplete: () => void;
 }) => {
   let background: Phaser.GameObjects.Image[] | null = null;
   let smog: Phaser.GameObjects.Image | null = null;
@@ -74,6 +76,7 @@ export const initPhaser = ({
         this.load.image('block', './block.png');
         this.load.multiatlas('scene-sprites', './scene-sprites.json');
         this.load.json('scene-shapes', './scene-shapes.json');
+        this.load.on('complete', onLoadComplete);
       },
       create(this: Phaser.Scene) {
         const sceneShapes = this.cache.json.get('scene-shapes');
@@ -251,14 +254,16 @@ export const initPhaser = ({
   };
 };
 
-interface SceneProps {}
+interface SceneProps {
+  onLoadComplete: () => void;
+}
 
-export const Scene: React.FC<SceneProps> = _props => {
+export const Scene: React.FC<SceneProps> = ({onLoadComplete}) => {
   const windowSize = useWindowSize();
 
   const phaserRef = useCallback((element: HTMLDivElement | null) => {
     if (element) {
-      initPhaser({element, windowSize});
+      initPhaser({element, windowSize, onLoadComplete});
     }
   }, []);
 
