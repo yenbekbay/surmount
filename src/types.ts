@@ -10,3 +10,5 @@ export interface UserSettings {
   lastSmokedAt: IsoDate;
   cigarettesPerDay: CigarettesPerDay;
 }
+
+export interface UserState {}

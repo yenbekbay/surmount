@@ -3,6 +3,7 @@ import {Box} from 'fannypack';
 import React, {useEffect} from 'react';
 import {Dashboard} from './routes/Dashboard';
 import {Onboarding} from './routes/Onboarding';
+import {Settings} from './routes/Settings';
 import {useUserSettings} from './storage';
 
 interface RoutesProps {}
@@ -17,10 +18,11 @@ export const Routes: React.FC<RoutesProps> = _props => {
   }, [userSettings]);
 
   return (
-    <Box style={{position: 'absolute', top: 0, left: 0, bottom: 0, right: 0}}>
+    <Box position="absolute" top={0} left={0} bottom={0} right={0}>
       <Router>
         <Onboarding path="onboarding" />
         <Dashboard path="dashboard" />
+        <Settings path="settings" />
       </Router>
     </Box>
   );
