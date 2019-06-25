@@ -16,3 +16,8 @@ declare const module: {
 
 // phaser dependencies
 declare class ActiveXObject {}
+
+// HACK: stub globals from @types/node
+declare namespace NodeJS {
+  interface ReadableStream {}
+}

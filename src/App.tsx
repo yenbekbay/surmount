@@ -1,18 +1,23 @@
-import {useWindowSize} from 'react-use';
-import React, {useCallback} from 'react';
-
-import {initPhaser} from './phaser';
+import {ThemeProvider as FannypackThemeProvider, Box} from 'fannypack';
+import React from 'react';
+import {Scene} from './components/Scene';
+import {Onboarding} from './components/Onboarding';
 
 interface AppProps {}
 
 export const App: React.FC<AppProps> = _props => {
-  const windowSize = useWindowSize();
-
-  const phaserRef = useCallback((element: HTMLDivElement | null) => {
-    if (element) {
-      initPhaser({element, windowSize});
-    }
-  }, []);
-
-  return <div ref={phaserRef} id="phaser" />;
+  return (
+    <FannypackThemeProvider
+      theme={{palette: {text: '#41536C', primary: '#41536C'}}}
+    >
+      <>
+        <Scene />
+        <Box
+          style={{position: 'absolute', top: 0, left: 0, bottom: 0, right: 0}}
+        >
+          <Onboarding />
+        </Box>
+      </>
+    </FannypackThemeProvider>
+  );
 };

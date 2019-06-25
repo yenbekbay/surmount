@@ -1,4 +1,6 @@
 import Phaser from 'phaser';
+import React, {useCallback} from 'react';
+import {useWindowSize} from 'react-use';
 
 const verticesForShape = (
   shape: {
@@ -233,7 +235,7 @@ export const initPhaser = ({
             0.05 * Math.pow(0.3, BACKGROUND_FILENAMES.length - idx);
 
           sprite.x =
-            -(groundSize.width - windowSize.width) * parallaxFactor +
+            -(groundSize.width - windowSize.width) * parallaxFactor -
             this.cameras.main.scrollX * parallaxFactor;
         });
 
@@ -247,4 +249,18 @@ export const initPhaser = ({
   return () => {
     game.destroy(true);
   };
+};
+
+interface SceneProps {}
+
+export const Scene: React.FC<SceneProps> = _props => {
+  const windowSize = useWindowSize();
+
+  const phaserRef = useCallback((element: HTMLDivElement | null) => {
+    if (element) {
+      initPhaser({element, windowSize});
+    }
+  }, []);
+
+  return <div ref={phaserRef} id="phaser" />;
 };
