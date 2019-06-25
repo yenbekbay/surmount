@@ -1,3 +1,4 @@
+import {navigate, RouteComponentProps} from '@reach/router';
 import {format as formatDate} from 'date-fns';
 import {
   Button,
@@ -8,22 +9,25 @@ import {
   RadioGroupField,
 } from 'fannypack';
 import {Field, Form, Formik} from 'formik';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Step, Steps, Wizard} from 'react-albus';
-import {useLocalStorage} from 'react-use';
 import * as yup from 'yup';
+import {useUserSettings} from '../storage';
 import {CigarettesPerDay, UserSettings} from '../types';
 
 const FormikInputField = formikField(InputField);
 const FormikRadioGroupField = formikField(RadioGroupField);
 
-interface OnboardingProps {}
+interface OnboardingProps extends RouteComponentProps {}
 
 export const Onboarding: React.FC<OnboardingProps> = _props => {
-  const [settings, setUserSettings] = useLocalStorage(
-    '@surmount/user-settings',
-  );
-  if (settings) return null;
+  const [userSettings, setUserSettings] = useUserSettings();
+
+  useEffect(() => {
+    if (userSettings) {
+      navigate('dashboard');
+    }
+  }, [userSettings]);
 
   return (
     <Wizard>

@@ -31,12 +31,14 @@
     "dist/": true
   },
 
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "javascript.implicitProjectConfig.checkJs": true,
   "javascript.suggestionActions.enabled": false,
   "javascript.validate.enable": true,
-  "typescript.tsdk": "./node_modules/typescript/lib",
   "typescript.disableAutomaticTypeAcquisition": true,
   "typescript.format.enable": false,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "typescript.tsdk": "./node_modules/typescript/lib",
   "emmet.showExpandedAbbreviation": "never",
   "css.lint.unknownAtRules": "ignore"
 }
