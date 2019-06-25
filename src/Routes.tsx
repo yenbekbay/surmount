@@ -8,6 +8,9 @@ import {useUserSettings} from './storage';
 
 interface RoutesProps {}
 
+/**
+ * Main navigation of the app. This is where all routing logic happens.
+ */
 export const Routes: React.FC<RoutesProps> = _props => {
   const [userSettings] = useUserSettings();
 

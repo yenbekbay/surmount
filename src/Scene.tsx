@@ -2,30 +2,24 @@ import Phaser from 'phaser';
 import React, {useCallback} from 'react';
 import {useWindowSize} from 'react-use';
 
-const verticesForShape = (
-  shape: {
-    fixtures: {
-      vertices: {x: number; y: number}[][];
-    }[];
-  },
-  {
-    scale,
-    constant,
-  }: {
-    scale: number;
-    constant: {x: number; y: number};
-  },
-) =>
-  shape.fixtures[0].vertices
-    .reduce((a, b) => [...a, ...b])
-    .sort((a, b) => a.x - b.x)
-    .map(vertex => ({
-      x: vertex.x * scale + constant.x,
-      y: vertex.y * scale + constant.y,
-    }));
+interface SceneProps {
+  onLoadComplete: () => void;
+}
 
-const vertexAtPoint = (x: number, vertices: {x: number; y: number}[]) =>
-  [...vertices].sort((a, b) => Math.abs(x - a.x) - Math.abs(x - b.x))[0];
+/**
+ * Canvas/WebGL rendering of the app's visualization.
+ */
+export const Scene: React.FC<SceneProps> = ({onLoadComplete}) => {
+  const windowSize = useWindowSize();
+
+  const phaserRef = useCallback((element: HTMLDivElement | null) => {
+    if (element) {
+      initPhaser({element, windowSize, onLoadComplete});
+    }
+  }, []);
+
+  return <div ref={phaserRef} id="phaser" />;
+};
 
 const BACKGROUND_SKY_COLOR = '#edf1f4';
 const BACKGROUND_FILENAMES = [
@@ -254,18 +248,27 @@ export const initPhaser = ({
   };
 };
 
-interface SceneProps {
-  onLoadComplete: () => void;
-}
+const verticesForShape = (
+  shape: {
+    fixtures: {
+      vertices: {x: number; y: number}[][];
+    }[];
+  },
+  {
+    scale,
+    constant,
+  }: {
+    scale: number;
+    constant: {x: number; y: number};
+  },
+) =>
+  shape.fixtures[0].vertices
+    .reduce((a, b) => [...a, ...b])
+    .sort((a, b) => a.x - b.x)
+    .map(vertex => ({
+      x: vertex.x * scale + constant.x,
+      y: vertex.y * scale + constant.y,
+    }));
 
-export const Scene: React.FC<SceneProps> = ({onLoadComplete}) => {
-  const windowSize = useWindowSize();
-
-  const phaserRef = useCallback((element: HTMLDivElement | null) => {
-    if (element) {
-      initPhaser({element, windowSize, onLoadComplete});
-    }
-  }, []);
-
-  return <div ref={phaserRef} id="phaser" />;
-};
+const vertexAtPoint = (x: number, vertices: {x: number; y: number}[]) =>
+  [...vertices].sort((a, b) => Math.abs(x - a.x) - Math.abs(x - b.x))[0];

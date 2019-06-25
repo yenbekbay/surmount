@@ -1,6 +1,6 @@
 # Surmount
 
-Web app built with [React](https://reactjs.org/), [Parce.js](https://parceljs.org/), [Tailwind CSS](https://tailwindcss.com/), [Fannypack](https://fannypack.style/), and [Reach Router](https://reach.tech/router).
+Web app built with [React](https://reactjs.org/), [Parcel.js](https://parceljs.org/), [Tailwind CSS](https://tailwindcss.com/), [Fannypack](https://fannypack.style/), [Phaser](https://phaser.io/), and [Reach Router](https://reach.tech/router).
 
 ## Getting started
 
