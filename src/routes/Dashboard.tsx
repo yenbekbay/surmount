@@ -1,16 +1,12 @@
-import {RouteComponentProps} from '@reach/router';
 import {differenceInCalendarDays, parse} from 'date-fns';
 import {Card, Flex, Heading, Overlay, Text} from 'fannypack';
 import React, {useMemo} from 'react';
-import {useWindowSize} from 'react-use';
-import {SMOKE_FREE_PROGRAM_DAYS, calculateMoneySaved} from '../logic';
+import {calculateMoneySaved, SMOKE_FREE_PROGRAM_DAYS} from '../logic';
 import {useUserSettings} from '../storage';
+import {route} from './_route';
 
-interface DashboardProps extends RouteComponentProps {}
-
-export const Dashboard: React.FC<DashboardProps> = _props => {
+export const Dashboard = route(_props => {
   const [userSettings] = useUserSettings();
-  const windowSize = useWindowSize();
   const today = useMemo(() => new Date(), []);
 
   if (!userSettings) return null;
@@ -42,4 +38,4 @@ export const Dashboard: React.FC<DashboardProps> = _props => {
       </Flex>
     </Overlay>
   );
-};
+});

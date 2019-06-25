@@ -1,10 +1,11 @@
-import {Router, navigate} from '@reach/router';
+import {navigate, Router} from '@reach/router';
 import {Box} from 'fannypack';
 import React, {useEffect} from 'react';
 import {Dashboard} from './routes/Dashboard';
 import {Onboarding} from './routes/Onboarding';
 import {Settings} from './routes/Settings';
 import {useUserSettings} from './storage';
+import {useLocation} from 'react-use';
 
 interface RoutesProps {}
 
@@ -13,10 +14,13 @@ interface RoutesProps {}
  */
 export const Routes: React.FC<RoutesProps> = _props => {
   const [userSettings] = useUserSettings();
+  const location = useLocation();
 
   useEffect(() => {
     if (!userSettings) {
       navigate('onboarding');
+    } else if (location.pathname === '/') {
+      navigate('dashboard');
     }
   }, [userSettings]);
 

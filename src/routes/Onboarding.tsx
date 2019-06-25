@@ -1,12 +1,10 @@
-import {RouteComponentProps} from '@reach/router';
 import {Button, DialogModal, Modal} from 'fannypack';
 import React from 'react';
 import {Step, Steps, Wizard} from 'react-albus';
 import {SettingsModal} from '../components/SettingsModal';
+import {route} from './_route';
 
-interface OnboardingProps extends RouteComponentProps {}
-
-export const Onboarding: React.FC<OnboardingProps> = _props => (
+export const Onboarding = route(_props => (
   <Wizard>
     <Steps>
       <Step
@@ -47,4 +45,4 @@ export const Onboarding: React.FC<OnboardingProps> = _props => (
       />
     </Steps>
   </Wizard>
-);
+));
