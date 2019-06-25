@@ -9,7 +9,7 @@ import {
   RadioGroupField,
 } from 'fannypack';
 import {Field, Form, Formik} from 'formik';
-import React, {useEffect} from 'react';
+import React from 'react';
 import * as yup from 'yup';
 import {useUserSettings} from '../storage';
 import {CigarettesPerDay, UserSettings} from '../types';
@@ -23,13 +23,7 @@ interface SettingsModalProps {
 }
 
 export const SettingsModal: React.FC<SettingsModalProps> = ({title, body}) => {
-  const [userSettings, setUserSettings] = useUserSettings();
-
-  useEffect(() => {
-    if (userSettings) {
-      navigate('dashboard');
-    }
-  }, [userSettings]);
+  const [, setUserSettings] = useUserSettings();
 
   return (
     <Modal.Container defaultVisible>
@@ -42,6 +36,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({title, body}) => {
           onSubmit={(values, actions) => {
             setUserSettings(values);
             actions.setSubmitting(false);
+            navigate('/dashboard');
           }}
           validationSchema={yup.object().shape({
             lastSmokedAt: yup.date().required(),
